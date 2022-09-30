@@ -9,6 +9,8 @@ public class RegistrationInfo {
     private final String city;
     private final String name;
     private final String phone;
-    private final String dateFirst;
-    private final String dateSecond;
+
 }
+public String generateDate(int days) {
+        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    }
